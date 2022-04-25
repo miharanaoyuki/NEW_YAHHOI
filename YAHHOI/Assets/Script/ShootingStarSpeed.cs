@@ -8,9 +8,9 @@ public class ShootingStarSpeed : MonoBehaviour
     void Start()
     {
         float speed = 5f;//飛ばすときの初速度
-        float maxSpeedY = -10f;//飛ばすときのY方向の最高速度(大きいほど角度が大きくなる)
+        float maxSpeedY = -2f;//飛ばすときのY方向の最高速度(大きいほど角度が大きくなる)
 
-        Vector3 vel = new Vector3(Random.Range(-1f, 1f), 0f, Random.Range(-1f, 1f)).normalized * speed;
+        Vector3 vel = new Vector3(Random.Range(-0.5f, 0.5f), 0f, Random.Range(-0.5f, 0.5f)).normalized * speed;
         vel.y = maxSpeedY;
         GetComponent<Rigidbody2D>().velocity = vel;
     }

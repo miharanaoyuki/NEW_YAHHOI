@@ -77,7 +77,7 @@ public class Shot : MonoBehaviour
         if (!fly)
         {
             // 発射されるまでプレイヤーについていく
-            transform.position = Player.transform.position;
+            transform.position = new Vector3(Player.transform.position.x, Player.transform.position.y + 1, 0);
         }
 
         // 一度目かどうか
@@ -135,7 +135,10 @@ public class Shot : MonoBehaviour
             Destroy(nearObj);
 
             // 星を生成する
-            generate.Clone();
+            if (generate.Star > 0)
+            {
+                generate.Clone();
+            }
 
             // スクリプトをオフにする
             GetComponent<Shot>().enabled = false;
@@ -193,7 +196,7 @@ public class Shot : MonoBehaviour
     void MovePowerMeter()
     {
         // 星を飛ばしたらメーターを止める
-        if(Move)
+        if (Move)
         {
             // Moveがtrueなら何もせずに返す
             return;
@@ -227,7 +230,7 @@ public class Shot : MonoBehaviour
 
         // スライダーの現在値をSpeedに格納
         Speed = powerMeterSlider.value;
-        
+
     }
 
     void WaitBoundaryValue()
