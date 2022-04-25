@@ -24,7 +24,7 @@ public class PlayerMovement : MonoBehaviour
             //走るアニメーション
             transform.localScale = new Vector3(-0.17f, 0.17f, 1);//方向
 
-            anim.SetBool("run", true);//アニメーション
+            anim.SetBool("UP_run", true);//アニメーション
 
             right = true;
         }
@@ -36,13 +36,13 @@ public class PlayerMovement : MonoBehaviour
                 (transform.right * Speed * Time.deltaTime);
             //走るアニメーション
             transform.localScale = new Vector3(0.17f, 0.17f, 1);//方向
-            anim.SetBool("run", true);//アニメーション
+            anim.SetBool("UP_run", true);//アニメーション
             right = false;
         }
         //止まっている
         else
         {
-            anim.SetBool("run", false);//runアニメーションが終わる
+            anim.SetBool("UP_run", false);//runアニメーションが終わる
         }
 
         //光線を引く
