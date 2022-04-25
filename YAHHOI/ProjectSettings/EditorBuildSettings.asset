@@ -1,0 +1,41 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1045 &1
+EditorBuildSettings:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/title.unity
+    guid: 47c230345d2d73c4faacc20d0cd02cc2
+  - enabled: 1
+    path: Assets/Scenes/stage select.unity
+    guid: 7df7d72129988a148b0a6ca1dadc9346
+  - enabled: 1
+    path: Assets/Scenes/item  explanation.unity
+    guid: 46b5bc6ead03c074ab9ec6125677e5d0
+  - enabled: 1
+    path: Assets/Scenes/scenario.unity
+    guid: 1643e0b7fe4c3ce4683ed3fd92186470
+  - enabled: 1
+    path: Assets/Scenes/Operation explanation.unity
+    guid: 1b053c52ae62e57458a06eac5fb65796
+  - enabled: 1
+    path: Assets/Scenes/fallmode spring.unity
+    guid: d6105dad691214b4cbb455d945b6070e
+  - enabled: 1
+    path: Assets/Scenes/fallmode summer.unity
+    guid: 5413c425bc5304f40830d3240559752f
+  - enabled: 1
+    path: Assets/Scenes/fallmode autumn.unity
+    guid: e710d39e976acd149b4bc5c192ecdce0
+  - enabled: 1
+    path: Assets/Scenes/fallmode winter.unity
+    guid: 1ee16cedfb2de2b47a622841bd5390d3
+  - enabled: 1
+    path: Assets/Scenes/gameover spring.unity
+    guid: 802405d299dddf44eaa8ee252477d28a
+  - enabled: 1
+    path: Assets/Scenes/clear.unity
+    guid: a68f58e016282f5469b6c6d823bc412c
+  m_configObjects: {}
