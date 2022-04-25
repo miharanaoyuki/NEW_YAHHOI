@@ -460,6 +460,7 @@ Transform:
   m_LocalScale: {x: 0.17, y: 0.17, z: 1}
   m_Children:
   - {fileID: 271058408}
+  - {fileID: 1020167946}
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -605,6 +606,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ShootingStarPrefab: {fileID: 8557619295111159503, guid: 922743f4a8788fa4f8e731740c8cbab9, type: 3}
+  i: 0
 --- !u!4 &826920870
 Transform:
   m_ObjectHideFlags: 0
@@ -713,11 +715,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1020167945}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -5.47, y: 3.61, z: 0}
-  m_LocalScale: {x: 0.17, y: 0.17, z: 1}
+  m_LocalPosition: {x: 0, y: 7, z: 1}
+  m_LocalScale: {x: 3, y: 3, z: 1}
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_Father: {fileID: 668409140}
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &1020167947
 SpriteRenderer:
@@ -809,7 +811,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ShootingStarText: {fileID: 754352521}
-  BasketIncount: 0
+  Player: {fileID: 0}
 --- !u!114 &1020167950
 MonoBehaviour:
   m_ObjectHideFlags: 0

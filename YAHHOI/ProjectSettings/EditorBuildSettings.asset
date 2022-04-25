@@ -38,4 +38,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/clear.unity
     guid: a68f58e016282f5469b6c6d823bc412c
+  - enabled: 1
+    path: Assets/Scenes/NakanoTest.unity
+    guid: b37d46b4bf83a6e48b24445e12cdcf5e
   m_configObjects: {}

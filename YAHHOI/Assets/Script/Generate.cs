@@ -6,22 +6,24 @@ public class Generate : MonoBehaviour
 {
     public GameObject StarPrefab; // 星プレハブ
     Shot shot; // Shotスクリプト
+    public int Star = 0;
 
     void Start()
     {
-        Instantiate(StarPrefab, transform.position, Quaternion.identity);
+        Star = ShootingStarCount.StarCount();
+        Instantiate(StarPrefab, new Vector3(transform.position.x, transform.position.y + 1, 0), Quaternion.identity);
         shot = StarPrefab.GetComponent<Shot>();
+        Star--;
     }
 
     void Update()
     {
-        float x = Input.GetAxis("Horizontal");//x軸方向移動の設定
 
-        transform.position += new Vector3(x, 0, 0) * Time.deltaTime * 4.0f;//移動
     }
 
     public void Clone()
     {
-        Instantiate(StarPrefab, transform.position, Quaternion.identity);
+        Instantiate(StarPrefab, new Vector3(transform.position.x, transform.position.y + 1, 0), Quaternion.identity);
+        Star--;
     }
 }

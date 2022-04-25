@@ -16,7 +16,7 @@ public class Meteorite : MonoBehaviour
     void Update()
     {
         // 30フレーム毎にシーンにプレハブを生成
-        if (Time.frameCount % 60 == 0)
+        if (Time.frameCount % 100 == 0)
         {
             // プレハブの位置をランダムで設定
             float x = Random.Range(-5.0f, 5.0f);
@@ -26,7 +26,7 @@ public class Meteorite : MonoBehaviour
             // プレハブを生成
             GameObject ball = Instantiate(MeteoritePrefab, pos, Quaternion.identity);
 
-            Destroy(ball, 1.0f);
+            Destroy(ball, 10.0f);
         }
     }
 }

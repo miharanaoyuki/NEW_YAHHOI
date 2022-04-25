@@ -5,6 +5,7 @@ using UnityEngine;
 public class PlayerMovement : MonoBehaviour
 {
     private Animator anim = null;
+    public static bool right = false;
     //↓Animatorのインスタンスを取得
     void Start()
     {
@@ -14,8 +15,8 @@ public class PlayerMovement : MonoBehaviour
     public float Speed = 3.0f; // 移動速度
     void Update()
     {
-         //右に進む
-        if (Input.GetKey(KeyCode.RightArrow))
+        //右に進む
+        if (Input.GetAxis("Horizontal") > 0)
         {
             transform.position =
                 transform.position +
@@ -24,9 +25,11 @@ public class PlayerMovement : MonoBehaviour
             transform.localScale = new Vector3(-0.17f, 0.17f, 1);//方向
 
             anim.SetBool("run", true);//アニメーション
+
+            right = true;
         }
         //左に進む
-        else if (Input.GetKey(KeyCode.LeftArrow))
+        else if (Input.GetAxis("Horizontal") < 0)
         {
             transform.position =
                 transform.position -
@@ -34,6 +37,7 @@ public class PlayerMovement : MonoBehaviour
             //走るアニメーション
             transform.localScale = new Vector3(0.17f, 0.17f, 1);//方向
             anim.SetBool("run", true);//アニメーション
+            right = false;
         }
         //止まっている
         else
@@ -44,11 +48,11 @@ public class PlayerMovement : MonoBehaviour
         //光線を引く
         RaycastHit2D hit = Physics2D.Raycast(
                     CenterOfBalance.position,
-                    -transform.up, 
+                    -transform.up,
                     float.PositiveInfinity);
 
         // Transformの真下の地形の法線を調べる
-        if (hit.collider != null) 
+        if (hit.collider != null)
         {
             string name = hit.collider.gameObject.name; // 衝突した相手オブジェクトの名前を取得
 

@@ -14,9 +14,10 @@ public class MeteoriteHit : MonoBehaviour
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.tag == ("Meteorite") && script.Speed > 0)
+        if (collision.gameObject.tag == ("Meteorite") && script.Speed > 0.1f)
         {
-            script.Speed /= 1.3f;
+            script.Speed -= 0.3f;
+            Destroy(collision.gameObject);
         }
     }
 }

@@ -12,7 +12,15 @@ public class Rotetion : MonoBehaviour
         var v = Input.GetAxis("R_Vertical");
         // ¯‚ª”ò‚ñ‚Å‚¢‚­Šp“x(“x”–@)
         float radian = Mathf.Atan2(-v, h) * Mathf.Rad2Deg;
-        // z²‚É¯‚ª”ò‚ñ‚Å‚¢‚­Šp“x‚¾‚¯‰ñ“]
-        transform.rotation = Quaternion.Euler(0.0f, 0.0f, radian);
+        if (PlayerMovement.right)
+        {
+            // z²‚É¯‚ª”ò‚ñ‚Å‚¢‚­Šp“x‚¾‚¯‰ñ“]
+            transform.rotation = Quaternion.Euler(0.0f, 0.0f, radian + 180);
+        }
+        else
+        {
+            // z²‚É¯‚ª”ò‚ñ‚Å‚¢‚­Šp“x‚¾‚¯‰ñ“]
+            transform.rotation = Quaternion.Euler(0.0f, 0.0f, radian);
+        }
     }
 }
